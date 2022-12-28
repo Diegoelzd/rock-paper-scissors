@@ -1,6 +1,10 @@
 
 choices = ["Rock", "Paper", "Scissors"];
+const playerScore = 0;
+const computerScore = 0;
 
+
+let playerSelection;
 function getComputerChoice(){
 const randomNumber = Math.floor(Math.random() * choices.length); 
 const computerSelection = randomNumber;
@@ -17,17 +21,26 @@ console.log("scissor")
 
 
 function getPlayerChoice(){
-const playerSelection = prompt("Rock, paper or scissor?")
+const playerSelection = prompt("Rock, paper or scissor?").toLowerCase();
+console.log(playerSelection)}
 
-
-}
 
 
 
 function playRound(){
 getComputerChoice()
 getPlayerChoice()
+
+
 }
 
 
-playRound()
+
+function game(){
+for(i=0; i< 5; i++){
+    playRound()
+
+}}
+
+game();
+
