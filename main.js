@@ -1,38 +1,38 @@
 
+
 choices = ["Rock", "Paper", "Scissors"];
 const playerScore = 0;
 const computerScore = 0;
 
 
-let playerSelection;
 function getComputerChoice(){
-const randomNumber = Math.floor(Math.random() * choices.length); 
-const computerSelection = randomNumber;
-
-
-if(computerSelection == 0){
-    console.log("rock")
-}else if(computerSelection == 1){
-    console.log("paper")}else if(computerSelection == 2){
-console.log("scissor")
-    }
-
+const randomNumber = choices[Math.floor(Math.random() * choices.length)].toLowerCase(); 
+return randomNumber;
 }
+
 
 
 function getPlayerChoice(){
-const playerSelection = prompt("Rock, paper or scissor?").toLowerCase();
-console.log(playerSelection)}
+const userSelection = prompt("Rock, paper or scissor?").toLowerCase();
+playerSelection = userSelection;
+return playerSelection;
 
-
+}
 
 
 function playRound(){
-getComputerChoice()
-getPlayerChoice()
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
+console.log("Computer:", playerSelection);
+console.log("User:",computerSelection);
 
+
+if(computerSelection == playerSelection){
+    console.log("It's a tie!")
+}
 
 }
+
 
 
 
@@ -40,7 +40,11 @@ function game(){
 for(i=0; i< 5; i++){
     playRound()
 
-}}
+}
+
+
+
+}
 
 game();
 
