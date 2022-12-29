@@ -28,8 +28,20 @@ console.log("User:",computerSelection);
 
 
 if(computerSelection == playerSelection){
-    console.log("It's a tie!")
-}
+    console.log("It's a tie!");
+
+} else if(computerSelection == "rock" && playerSelection == "paper" ||
+ computerSelection == "paper" && playerSelection == "scissors"  ||
+  computerSelection == "scissors" &&playerSelection == "rock")
+  {console.log("You win!")} 
+
+
+
+
+else if(computerSelection == "paper" && playerSelection == "rock" || 
+    computerSelection == "scissors" && playerSelection == "paper"  || computerSelection == "rock" &&
+    playerSelection == "scissors"){ console.log("You lose!" )}
+
 
 }
 
